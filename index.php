@@ -44,7 +44,7 @@
         if (empty($_POST["name"])) {
             $nameErr = "Name is required";
         } elseif (!preg_match("/^[a-zA-Z\s]*$/", $_POST["name"])) {
-            $nameErr = "Only letters and spaces are allowed in the name";
+            $nameErr = "Invalid Name";
         } else {
             $name = test_input($_POST["name"]);
         }
@@ -66,7 +66,7 @@
             $courses = implode(", ", $_POST["courses"]);
         }
         if (empty($_POST["agree"])) {
-            $agreeErr = "You must agree to continue";
+            $agreeErr = "You must agree to terms";
         }
     }
 
